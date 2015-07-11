@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Fox Block",
+    "description": "The simple and super easy to use way to filter out Fox News from your life.",
+    "version": "0.0.1",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "jquery-1.11.3.min.js",
+                "helloworld.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Fox Block",
+        "default_popup": "popup.html",
+    },
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ]
+}
